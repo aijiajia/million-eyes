@@ -36,9 +36,9 @@ train_step = tf.train.AdamOptimizer(0.001).minimize(loss)
 rdm = RandomState(1)
 dataset_size = 4
 X = rdm.rand(dataset_size, 2)
-#每一个元素是一个列表
+# 每一个元素是一个列表
 Y = [[x1 + x2 + rdm.rand() / 10.0 - 0.05] for (x1, x2) in X]
-#就一个列表
+# 就一个列表
 # Y2 = [x1 + x2 + rdm.rand() / 10.0 - 0.05 for (x1, x2) in X]
 where_v = tf.where(1==2,2,3)
 

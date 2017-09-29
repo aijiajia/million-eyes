@@ -37,7 +37,7 @@ MOVING_AVERAGE_DECAY = 0.99  # 滑动平均衰减率
 
 def inference(input_tensor, avg_class, weights1, biases1, weights2, biases2):
     # 当没有提供滑动平均类时，直接使用参数当前的取值。
-    if avg_class == None:
+    if avg_class  None:
         layer1 = tf.nn.relu(tf.matmul(input_tensor, weights1) + biases1)
         return tf.matmul(layer1, weights2) + biases2
     else:
