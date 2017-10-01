@@ -1,5 +1,6 @@
 # million-eyes35
 ## NumPy学习指南
+- [源码参见million-eyes27](https://github.com/aijiajia/million-eyes27/tree/master/Books/NumPy%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97%E9%9A%8F%E4%B9%A6%E6%BA%90%E7%A0%81)
 ## OpenCV3计算机视觉
 ## python Cookbook
 ## Tensorflow 框架
