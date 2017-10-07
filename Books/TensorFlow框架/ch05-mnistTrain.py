@@ -102,7 +102,10 @@ def train(mnist):
 
     # 设置指数衰减的学习率 exponential:指数
     learning_rate = tf.train.exponential_decay(
-        LEARNING_RATE_BASE, global_step, mnist.train.num_examples / BATCH_SIZE, LEARNING_RATE_DECAY)
+        LEARNING_RATE_BASE,   # 基础的学习率，学习率在这个基础上递减
+        global_step,          # 当前迭代的次数
+        mnist.train.num_examples / BATCH_SIZE,  # 过完所有训练数据需要迭代的次数
+        LEARNING_RATE_DECAY)  # 学习率的衰减速度
 
     # 使用tf.train.GradientDescentOptimizer优化算法来优化损失函数
     train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
