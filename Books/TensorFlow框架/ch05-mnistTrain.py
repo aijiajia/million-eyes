@@ -143,6 +143,7 @@ def train(mnist):
 
         # 迭代训练
         for i in range(TRAINING_STEPS):
+            # 没过1000轮输出1次在验证数据集上的测试结果。
             if i % 1000 == 0:
                 validate_acc = sess.run(accuracy, feed_dict=validate_feed)
                 print("After %d training step(s),validation accuracy"
