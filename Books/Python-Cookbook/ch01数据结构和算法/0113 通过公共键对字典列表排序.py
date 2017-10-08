@@ -46,8 +46,8 @@ rows_by_lfname = sorted(rows, key=itemgetter('fname','lname'))
 
 
 # 有时候用lambda表达式来取代itemgetter()的功能。例如：
-rows_by_name = sorted(rows, key=lambda r:r['fname'])
-rows_by_lfname = sorted(rows, key=lambda r:(r['fname'],r['lname']))
+rows_by_name = sorted(rows, key=lambda r: r['fname'])
+rows_by_lfname = sorted(rows, key=lambda r: (r['fname'],r['lname']))
 
 # lambda 表达式性能要低于itemgetter()
 
