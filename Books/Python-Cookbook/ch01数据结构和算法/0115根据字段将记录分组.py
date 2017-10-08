@@ -14,6 +14,8 @@
 """
 from operator import itemgetter
 from itertools import groupby
+from collections import defaultdict
+
 
 
 rows = [
@@ -34,7 +36,19 @@ rows.sort(key=itemgetter('date'))
 # 按date分组返回(key,values),一对多。
 # 注意：
 # groupby() 只能检查连续的项，不首先排序的话，无法按所想的方式排序。
-for date, items in groupby(rows, key=itemgetter('date')):
-    print(date)
-    for i in items:
-        print(' ', i)
+# for date, items in groupby(rows, key=itemgetter('date')):
+    # print(date)
+    # for i in items:
+    #     # print(' ', i)
+
+
+# 讨论
+# 如果只是简单根据日期将数据分组到一起，放进一个大的数据结构中以允许进行随机访问
+# 那么利用defaultdict()构建一个一键多值字典可能会更好。
+
+rows_by_date = defaultdict(list)
+for row in rows:
+    rows_by_date[row['date']].append(row)
+
+for r in rows_by_date['07/01/2012']:
+    print(r)
