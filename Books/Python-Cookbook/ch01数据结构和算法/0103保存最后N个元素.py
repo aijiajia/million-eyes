@@ -30,9 +30,21 @@ if __name__ == '__main__':
     # text = 'hello world, python'
     # if 'python' in text:
     #     print('-'*20)
-    with open('somefile.txt') as f:
-        for line, prevlines in search(f, 'python', 5):
-            for pline in prevlines:
-                print(pline, end='')
-            print(line, end='')
-            print('-'*20)
+    # with open('somefile.txt') as f:
+    #     for line, prevlines in search(f, 'python', 5):
+    #         for pline in prevlines:
+    #             print(pline, end='')
+    #         print(line, end='')
+    #         print('-'*20)
+    #
+    q = deque()
+    q.append(1)
+    q.append(2)
+    q.append(3)
+    print(q)
+    q.appendleft(4)
+    print(q)
+    print(q.pop())
+    print(q)
+    print(q.popleft())
+    print(q)
