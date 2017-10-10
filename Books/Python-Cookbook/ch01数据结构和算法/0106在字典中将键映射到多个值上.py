@@ -51,6 +51,6 @@ if __name__ == '__main__':
 
     # 讨论
     # 使用defaultdict后代码清晰的多。如：
-    d3 = defaultdict(list)
-    for key, value in pairs:
-        d[key].append(value)
+    # d3 = defaultdict(list)
+    # for key, value in pairs:
+    #     d[key].append(value)
