@@ -32,9 +32,12 @@ if __name__ == '__main__':
     top3 = word_counts.most_common(3)
     print(top3)
     print(word_counts['eyes'])
-    word_counts['eyes'] = 10
+    word_counts['eyes'] = 3
+    word_counts['ooo'] = 3
     print(word_counts['eyes'])
     print(word_counts)
     print(word_counts_copy)
+    # 讨论: Counter可以做键值的加减
+    # 注意： 键相同时对值做减法，键不同时对键做减法。
     print(word_counts - word_counts_copy)
     print(word_counts + word_counts_copy)
