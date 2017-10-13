@@ -16,6 +16,7 @@
 import tensorflow as tf
 from numpy.random import RandomState
 import matplotlib.pyplot as plt
+
 # a = tf.constant([[1.0, 2.0],[6.0, 7.0]], name="a")
 # # b = tf.constant([2.0, 3.0], name="b")
 # c = tf.reduce_mean(a)
@@ -40,7 +41,7 @@ X = rdm.rand(dataset_size, 2)
 Y = [[x1 + x2 + rdm.rand() / 10.0 - 0.05] for (x1, x2) in X]
 # 就一个列表
 # Y2 = [x1 + x2 + rdm.rand() / 10.0 - 0.05 for (x1, x2) in X]
-where_v = tf.where(1==2,2,3)
+where_v = tf.where(1 == 2, 2, 3)
 
 with tf.Session() as sess:
     init_op = tf.global_variables_initializer()
@@ -59,7 +60,3 @@ with tf.Session() as sess:
     #     print(sess.run(w1))
     #     # print(w1.eval())
     #
-
-
-
-
