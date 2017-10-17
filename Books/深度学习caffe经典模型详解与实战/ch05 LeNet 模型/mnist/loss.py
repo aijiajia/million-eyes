@@ -25,10 +25,10 @@ for it in range(niter):
     
     if it % test_interval == 0:
         acc=solver.test_nets[0].blobs['accuracy'].data
-        print 'Iteration', it, 'testing...','accuracy:',acc
+        print ('Iteration', it, 'testing...','accuracy:',acc)
         test_acc[it // test_interval] = acc
 
-print test_acc
+print (test_acc)
 _, ax1 = plt.subplots()
 ax2 = ax1.twinx()
 ax1.plot(np.arange(niter), train_loss)

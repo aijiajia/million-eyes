@@ -30,7 +30,7 @@ input_image = caffe.io.load_image(IMAGE_FILE,color=False)
 net = caffe.Classifier(MODEL_FILE,PRETRAINED)
 prediction = net.predict([input_image], oversample = False)
 caffe.set_mode_cpu()
-print 'predicted_class: ', prediction[0].argmax()
+print ('predicted_class: ', prediction[0].argmax())
 
 
 
