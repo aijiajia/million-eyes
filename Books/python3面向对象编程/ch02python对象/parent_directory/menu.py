@@ -21,10 +21,10 @@ class Memu:
         self.notebook = Notebook()
         self.choices = {
             "1": self.show_notes,
-            "2": self.search_notes,
-            "3": self.add_note,
-            "4": self.modify_note,
-            "5": self.quit
+            # "2": self.search_notes,
+            # "3": self.add_note,
+            # "4": self.modify_note,
+            # "5": self.quit
         }
 
     def display_memu(self):
@@ -41,24 +41,40 @@ class Memu:
         """)
 
 
-def show_notes():
-    pass
+def run(self):
+    """Display the menu and repond to choices."""
+    while True:
+        self.display_menu()
+        choice = input("Enter an option: ")
+        action = self.choices.get(choice)
+        if action:
+            action()
+        else:
+            print("{0} is not a valid choice".format(choice))
 
 
-def search_notes():
-    pass
+def show_notes(self, notes=None):
+    if not notes:
+        notes = self.notebook.notes
+    for note in notes:
+        print("{0}:{1}\n{2}".format(note.id, note.tags, note.memo))
 
 
-def add_note():
-    pass
+def search_notes(self):
+    return None
 
 
-def modify_note():
-    pass
+def add_note(self):
+    return None
 
 
-def quit():
-    pass
+def modify_note(self):
+    return None
+
+
+def quit(self):
+    return None
+
 
 class Main():
     def __init__(self):
@@ -66,6 +82,4 @@ class Main():
 
 
 if __name__ == "__main__":
-    m = Memu()
-    m.display_memu()
-    print(os.getcwd())
+    Memu().run()
