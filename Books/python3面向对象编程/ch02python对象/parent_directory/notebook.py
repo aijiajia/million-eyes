@@ -44,24 +44,35 @@ class Notebook:
 
     def new_note(self, memo, tags=''):
         """Create a new note and add it to the list"""
-        self.notes.append(self, Note(memo, tags))
+        self.notes.append(Note(memo, tags))
 
     def modify_memo(self, note_id, memo):
         """Find the note with the given id and change its mem to the given value"""
-        for note in self.notes:
-            if note_id == note.id:
-                note.memo = memo
-                break
+        # for note in self.notes:
+        #     if note_id == note.id:
+        #         note.memo = memo
+        #         break
+
+        # 以下的写法好高级
+        self._find_note(note_id).memo = memo
 
     def modify_tags(self, note_id, tags):
-        for note in self.notes:
-            if note_id == note.id:
-                note.tags = tags
-                break
+        # for note in self.notes:
+        #     if note_id == note.id:
+        #         note.tags = tags
+        #         break
+        self._find_note(note_id).tags = tags
 
     def search(self, filter):
         """Find all notes that match the given filter string"""
         return [note for note in self.notes if note.match(filter)]
+
+    def _find_note(self, note_id):
+        """Locate the note with the given id."""
+        for note in self.notes:
+            if note.id == note_id:
+                return note
+        return None
 
 
 def func():
@@ -74,8 +85,6 @@ class Main():
 
 
 if __name__ == "__main__":
-    n = Notebook
-    n.new_note("hello world")
-    # n.new_note("hello again", '')
-    # print(n.notes[0].id)
+    pass
+
 
