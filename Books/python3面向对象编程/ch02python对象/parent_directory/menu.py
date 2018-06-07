@@ -29,9 +29,7 @@ class Memu:
 
     def display_menu(self):
         print("""
-        Notebook Memu
-        
-        
+        Notebook Memu             
         
         1.Show all Notes
         2.Search Notes

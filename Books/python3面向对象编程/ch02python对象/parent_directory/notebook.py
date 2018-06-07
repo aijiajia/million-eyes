@@ -85,6 +85,7 @@ class Main():
 
 
 if __name__ == "__main__":
-    pass
+    for i in range(1,3):
+        print (i)
 
 
