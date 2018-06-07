@@ -31,6 +31,7 @@ subplot(233)
 barh(x, y)
 
 subplot(234)
+# 柱状对叠图
 bar(x, y)
 y1 = [7, 8, 5, 3]
 bar(x, y1, bottom=y, color='r')
