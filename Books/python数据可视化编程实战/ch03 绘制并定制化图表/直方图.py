@@ -21,8 +21,9 @@ def word_count(dataset):
             wc[x] += 1
         else:
             wc[x] = 1
-        sorted_wc=sorted(wc.items(), key=lambda x: x[0], reverse=True)
+        sorted_wc = sorted(wc.items(), key=lambda x: x[0], reverse=False)
     print(sorted_wc)
+
 
 if __name__ == "__main__":
     dataset = [113, 115, 119, 121, 124,
@@ -32,6 +33,5 @@ if __name__ == "__main__":
     word_count(dataset)
     subplot(121)
     subplot(122)
-    hist(dataset)
-
+    hist(dataset, edgecolor='r', bins=30)
     show()
