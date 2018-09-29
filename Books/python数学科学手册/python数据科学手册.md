@@ -262,7 +262,7 @@ In [40]: !dir
 ## 第5章 机器学习
 ### 5.1 什么是机器学习
 ### 5.2 Scikit-Learn简介
- ![image]()
+ ![image](https://github.com/aijiajia/million-eyes35/blob/master/Books/python%E6%95%B0%E5%AD%A6%E7%A7%91%E5%AD%A6%E6%89%8B%E5%86%8C/%E8%8A%B1%E7%9A%84%E7%BB%93%E6%9E%84.PNG)
 ### 5.3 超参数与模型验证
 ### 5.4 特征工程
 ### 5.5 朴素贝叶斯分类
