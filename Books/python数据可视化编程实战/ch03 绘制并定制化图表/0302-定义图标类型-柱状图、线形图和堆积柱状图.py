@@ -15,7 +15,7 @@
 
 from matplotlib.pyplot import *
 
-x = [1, 2, 3, 4]
+x = [1, 4, 2, 4]
 y = [5, 4, 3, 2]
 # 创建一个新图表
 figure()
