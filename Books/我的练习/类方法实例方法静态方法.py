@@ -20,22 +20,23 @@ class Person:
     def __init__(self, name):
         self.name = name
 
-    def sayHi(self):  # 加self区别于普通函数
+    def say_hi(self):  # 加self区别于普通函数
         print('Hello, your name is?', self.name)
 
     @staticmethod  # 声明静态，去掉则编译报错;还有静态方法不能访问类变量和实例变量
-    def sayName():  # 使用了静态方法，则不能再使用self
+    def say_name():  # 使用了静态方法，则不能再使用self
         print("sayName staticmethod ")  # ,grade,#self.name
 
     @classmethod  # 类方法
-    def classMethod(cls):
+    def class_method(cls):
         print("class method")
 
 
 if __name__ == '__main__':
     p = Person("king")
-    p.sayHi()
-    p.sayName()
-    p.classMethod()
-    Person.classMethod()
-    Person.sayName()
+    p.say_hi()
+    p.say_name()
+    p.class_method()
+    Person.class_method()
+    Person.say_name()
+

@@ -24,7 +24,8 @@ if __name__ == "__main__":
     # print(greeting[0])
 
     num = [i for i in range(1, 11)]
-    print(num[-3:])
+    print(num)
+    print(num[-3:-1])
     num2 = num[:]
     num2[0] = 2
     print(num2[::-1])
@@ -33,4 +34,4 @@ if __name__ == "__main__":
     print([1, 2] + [3, 4])
 
     # 序列相乘 生成新的重复序列
-    print([10]*5)
+    print([10, 20] * 5)

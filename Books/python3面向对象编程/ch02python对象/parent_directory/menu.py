@@ -13,7 +13,7 @@
 
 import sys
 import os
-from notebook import Notebook, Note
+from .Notebook import Notebook, Note
 
 
 class Memu:

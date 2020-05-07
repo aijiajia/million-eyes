@@ -40,6 +40,6 @@ if __name__ == "__main__":
     p1.x = 5
     p1.y = 4
     p1.reset()
-    print(p1.x,p1.y)
+    print(p1.x, p1.y)
     Point.reset(p1)
     print(p1.x)
